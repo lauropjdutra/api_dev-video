@@ -19,3 +19,5 @@ connectDatabase()
     );
   })
   .catch((error) => console.error("Erro ao conectar", error));
+
+module.exports = app;
