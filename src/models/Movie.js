@@ -1,5 +1,5 @@
-import mongoose from "mongoose"
-import moment from "moment-timezone"
+const mongoose = require("mongoose");
+const moment = require("moment-timezone");
 
 const movieSchema = new mongoose.Schema({
   title:{
@@ -42,6 +42,6 @@ const movieSchema = new mongoose.Schema({
     type: String,
     default: () => moment().tz('America/Sao_Paulo').format('DD/MM/YYYY HH:mm:ss'),
   }
-})
+});
 
-export default mongoose.model("Movie", movieSchema)
+module.exports = mongoose.model("Movie", movieSchema);
